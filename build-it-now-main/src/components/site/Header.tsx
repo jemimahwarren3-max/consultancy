@@ -1,9 +1,10 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
-import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { WHATSAPP_BOOKING_MESSAGE } from "@/lib/whatsapp";
 import { Logo } from "./Logo";
+import { WhatsAppButton } from "./WhatsAppButton";
 
 const NAV = [
   { to: "/", label: "Home" },
@@ -66,9 +67,13 @@ export function Header() {
           >
             Contact
           </Link>
-          <Button asChild variant={solid ? "default" : "light"} size="sm" className="h-9 px-4">
-            <Link to="/contact" hash="enquiry">Book a Consultation</Link>
-          </Button>
+          <WhatsAppButton
+            message={WHATSAPP_BOOKING_MESSAGE}
+            label="Book a Consultation"
+            variant={solid ? "default" : "light"}
+            size="sm"
+            className="h-9 px-4"
+          />
         </div>
 
         <button
@@ -96,9 +101,12 @@ export function Header() {
                 {n.label}
               </Link>
             ))}
-            <Button asChild size="xl" className="mt-4">
-              <Link to="/contact" hash="enquiry">Book a Consultation</Link>
-            </Button>
+            <WhatsAppButton
+              message={WHATSAPP_BOOKING_MESSAGE}
+              label="Book a Consultation"
+              size="xl"
+              className="mt-4"
+            />
           </div>
         </nav>
       )}

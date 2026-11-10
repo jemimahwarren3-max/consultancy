@@ -12,6 +12,8 @@ import {
   SectionHeading,
   TechGrid,
 } from "@/components/site/blocks";
+import { WhatsAppButton } from "@/components/site/WhatsAppButton";
+import { getWhatsAppUrl } from "@/lib/whatsapp";
 import { INDUSTRIES, SERVICES } from "@/lib/site-content";
 
 const TITLE = "Haki Systems — AI Engineering & Intelligent Automation Consultancy";
@@ -58,11 +60,7 @@ function Home() {
           </>
         }
       >
-        <Button asChild variant="light" size="xl">
-          <Link to="/contact" hash="enquiry">
-            Discuss a Project <ArrowRight />
-          </Link>
-        </Button>
+        <WhatsAppButton variant="light" size="xl" label="Discuss a Project" />
         <Button asChild variant="onDark" size="xl">
           <Link to="/services">Explore Our Services</Link>
         </Button>
@@ -169,9 +167,14 @@ function Home() {
             </li>
           ))}
           <li className="flex items-end bg-ink p-6 text-ink-foreground">
-            <Link to="/contact" hash="enquiry" className="inline-flex items-center gap-2 text-sm hover:text-brand">
+            <a
+              href={getWhatsAppUrl() ?? undefined}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm hover:text-brand"
+            >
               Discuss your sector <ArrowRight className="size-4" />
-            </Link>
+            </a>
           </li>
         </ul>
       </Section>

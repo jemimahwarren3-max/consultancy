@@ -1,8 +1,7 @@
-import { Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import type { ReactNode } from "react";
-import { Button } from "@/components/ui/button";
 import { WhatsAppButton } from "@/components/site/WhatsAppButton";
+import { getWhatsAppUrl } from "@/lib/whatsapp";
 import { cn } from "@/lib/utils";
 
 export function Section({
@@ -123,14 +122,7 @@ export function CtaBanner({
         <h2 className="display text-4xl md:col-span-7 md:text-6xl">{title}</h2>
         <div className="md:col-span-5">
           <p className="text-lg leading-relaxed text-ink-muted">{body}</p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Button asChild variant="light" size="xl">
-              <Link to="/contact" hash="enquiry">
-                {cta} <ArrowRight />
-              </Link>
-            </Button>
-            <WhatsAppButton variant="onDark" size="xl" />
-          </div>
+          <WhatsAppButton variant="light" size="xl" label={cta} className="mt-8" />
         </div>
       </div>
     </section>
@@ -138,15 +130,19 @@ export function CtaBanner({
 }
 
 export function InlineCta({ label = "Discuss this service" }: { label?: string }) {
+  const url = getWhatsAppUrl();
+  if (!url) return null;
+
   return (
-    <Link
-      to="/contact"
-      hash="enquiry"
+    <a
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
       className="group inline-flex items-center gap-2 text-sm font-medium text-foreground underline-offset-4 hover:text-brand"
     >
       {label}
       <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
-    </Link>
+    </a>
   );
 }
 

@@ -41,7 +41,7 @@ const STEPS: { title: string; body: string; list?: string[]; note?: string }[] =
       "The client authorises appropriate engineering access",
       "The client's IT administrator can participate in the process",
     ],
-    note: "We use least-privilege permissions and approved access procedures. We will never ask you to send passwords or service account private keys through the enquiry form or ordinary email.",
+    note: "We use least-privilege permissions and approved access procedures. We will never ask you to send passwords or service account private keys over WhatsApp or ordinary email.",
   },
   {
     title: "Engineering",

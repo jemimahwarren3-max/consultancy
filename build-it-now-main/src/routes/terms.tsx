@@ -38,8 +38,9 @@ function Terms() {
       </p>
       <h2>Enquiries</h2>
       <p>
-        Submitting an enquiry does not create a contract or obligation for either party. Do not
-        submit passwords, credentials, private keys or confidential documents through this website.
+        Messaging us on WhatsApp does not create a contract or obligation for either party. Do not
+        send passwords, credentials, private keys or confidential documents over WhatsApp or
+        through this website.
       </p>
       <h2>Third-party services</h2>
       <p>

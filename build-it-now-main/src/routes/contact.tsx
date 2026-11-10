@@ -1,12 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import heroImg from "@/assets/contact-skyline.jpg";
 import { ImageHero, Section } from "@/components/site/blocks";
-import { ContactForm } from "@/components/site/ContactForm";
 import { WhatsAppButton } from "@/components/site/WhatsAppButton";
+import { WHATSAPP_NUMBER } from "@/lib/whatsapp";
 
 const TITLE = "Contact Haki Systems — Discuss an AI or Automation Project";
 const DESC =
-  "Tell us about your organisation and the challenge you want to solve. We'll review your enquiry and arrange a consultation.";
+  "Message us on WhatsApp to tell us about your organisation and the challenge you want to solve. We'll arrange a consultation.";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -30,18 +30,18 @@ function Contact() {
         title="Tell us what you're looking to achieve."
         intro={
           <p>
-            Share a little about your organisation and the challenge you want to solve. Our team
-            will review your enquiry and get in touch.
+            Message us on WhatsApp with a little about your organisation and the challenge you
+            want to solve. Our team will review it and get in touch.
           </p>
         }
       />
-      <Section id="enquiry" className="scroll-mt-16">
+      <Section>
         <div className="grid gap-14 md:grid-cols-12">
-          <aside className="md:col-span-4">
+          <aside className="md:col-span-5">
             <p className="eyebrow text-muted-foreground">What happens next</p>
             <ol className="mt-6 space-y-6 border-l border-border pl-6">
               {[
-                ["We review your enquiry", "We read what you've shared to understand the context."],
+                ["You message us on WhatsApp", "Tell us about your organisation and the challenge you want to solve."],
                 ["We arrange a consultation", "A conversation about your processes, systems and goals."],
                 ["We prepare a proposal", "If appropriate: scope, architecture, timeline and engineering fee."],
               ].map(([t, d]) => (
@@ -55,13 +55,27 @@ function Contact() {
             <p className="mt-10 text-sm text-muted-foreground">
               We work with organisations in Zimbabwe, South Africa and internationally.
             </p>
-            <div className="mt-6 border-t border-border pt-6">
-              <p className="text-sm text-muted-foreground">Prefer WhatsApp?</p>
-              <WhatsAppButton size="lg" className="mt-3" />
-            </div>
           </aside>
-          <div className="md:col-span-7 md:col-start-6">
-            <ContactForm />
+          <div className="md:col-span-6 md:col-start-7">
+            <div className="rounded-md border border-border bg-surface p-8 md:p-12">
+              <p className="eyebrow text-muted-foreground">Start a conversation</p>
+              <h2 className="heading mt-4 text-2xl md:text-3xl">Message us on WhatsApp.</h2>
+              <p className="mt-4 max-w-md leading-relaxed text-muted-foreground">
+                This is the fastest way to reach us. Open WhatsApp, tell us about your
+                organisation and what you're trying to achieve, and we'll take it from there.
+              </p>
+              <WhatsAppButton size="xl" className="mt-8" />
+              {WHATSAPP_NUMBER && (
+                <p className="mt-4 text-sm text-muted-foreground">
+                  Or message us directly at +{WHATSAPP_NUMBER}.
+                </p>
+              )}
+              <p className="mt-6 rounded-md bg-background px-4 py-3 text-xs leading-relaxed text-muted-foreground">
+                Please do not send passwords, API keys, service account credentials, private keys
+                or confidential documents over WhatsApp. We will agree a secure access procedure
+                if a project goes ahead.
+              </p>
+            </div>
           </div>
         </div>
       </Section>

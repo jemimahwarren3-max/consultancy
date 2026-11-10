@@ -30,9 +30,6 @@ export function Footer() {
           <p className="mt-4 text-sm leading-relaxed text-ink-muted">
             Tell us what you are trying to achieve and we will arrange a consultation.
           </p>
-          <Link to="/contact" hash="enquiry" className="mt-4 inline-block text-sm underline underline-offset-4 hover:text-brand">
-            Send an enquiry →
-          </Link>
           <WhatsAppButton variant="onDark" size="sm" className="mt-4" />
         </div>
       </div>
