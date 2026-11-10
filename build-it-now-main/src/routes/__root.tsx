@@ -81,9 +81,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Kavira Systems — AI Engineering & Intelligent Automation" },
+      { title: "Haki Systems — AI Engineering & Intelligent Automation" },
       { name: "description", content: "AI engineering and intelligent automation consultancy." },
-      { property: "og:site_name", content: "Kavira Systems" },
+      { property: "og:site_name", content: "Haki Systems" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],

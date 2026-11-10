@@ -2,8 +2,9 @@ import { createFileRoute } from "@tanstack/react-router";
 import heroImg from "@/assets/contact-skyline.jpg";
 import { ImageHero, Section } from "@/components/site/blocks";
 import { ContactForm } from "@/components/site/ContactForm";
+import { WhatsAppButton } from "@/components/site/WhatsAppButton";
 
-const TITLE = "Contact Kavira Systems — Discuss an AI or Automation Project";
+const TITLE = "Contact Haki Systems — Discuss an AI or Automation Project";
 const DESC =
   "Tell us about your organisation and the challenge you want to solve. We'll review your enquiry and arrange a consultation.";
 
@@ -54,6 +55,10 @@ function Contact() {
             <p className="mt-10 text-sm text-muted-foreground">
               We work with organisations in Zimbabwe, South Africa and internationally.
             </p>
+            <div className="mt-6 border-t border-border pt-6">
+              <p className="text-sm text-muted-foreground">Prefer WhatsApp?</p>
+              <WhatsAppButton size="lg" className="mt-3" />
+            </div>
           </aside>
           <div className="md:col-span-7 md:col-start-6">
             <ContactForm />

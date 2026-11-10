@@ -14,7 +14,7 @@ import {
 } from "@/components/site/blocks";
 import { INDUSTRIES, SERVICES } from "@/lib/site-content";
 
-const TITLE = "Kavira Systems — AI Engineering & Intelligent Automation Consultancy";
+const TITLE = "Haki Systems — AI Engineering & Intelligent Automation Consultancy";
 const DESC =
   "We design and implement custom AI agents, intelligent workflows and connected business systems for organisations in Zimbabwe, South Africa and internationally.";
 
@@ -83,7 +83,7 @@ function Home() {
                 requirements and the outcomes an organisation wants to achieve.
               </p>
               <p className="text-foreground">
-                At Kavira Systems, we approach every engagement as an engineering problem first.
+                At Haki Systems, we approach every engagement as an engineering problem first.
               </p>
             </div>
           </div>
@@ -208,7 +208,7 @@ function Home() {
                 directly to the organisation by the relevant providers.
               </p>
               <p className="text-ink-foreground">
-                Kavira Systems charges separately for engineering, implementation and agreed
+                Haki Systems charges separately for engineering, implementation and agreed
                 support services.
               </p>
             </div>

@@ -14,8 +14,8 @@ function rateLimited(ip: string) {
 
 type CfEnv = {
   EMAIL?: { send: (m: Record<string, unknown>) => Promise<unknown> };
-  KAVIRA_INBOX_EMAIL?: string;
-  KAVIRA_FROM_EMAIL?: string;
+  HAKI_INBOX_EMAIL?: string;
+  HAKI_FROM_EMAIL?: string;
 };
 
 async function getCfEnv(): Promise<CfEnv> {
@@ -53,13 +53,13 @@ export const Route = createFileRoute("/api/submit-enquiry")({
         }
 
         const env = await getCfEnv();
-        const inbox = env.KAVIRA_INBOX_EMAIL ?? process.env.KAVIRA_INBOX_EMAIL;
-        const from = env.KAVIRA_FROM_EMAIL ?? process.env.KAVIRA_FROM_EMAIL;
+        const inbox = env.HAKI_INBOX_EMAIL ?? process.env.HAKI_INBOX_EMAIL;
+        const from = env.HAKI_FROM_EMAIL ?? process.env.HAKI_FROM_EMAIL;
         const send: EmailSender | undefined = env.EMAIL
           ? async (m) => {
               await env.EMAIL!.send({
                 to: m.to,
-                from: { email: m.from, name: "Kavira Systems" },
+                from: { email: m.from, name: "Haki Systems" },
                 subject: m.subject,
                 html: m.html,
                 text: m.text,

@@ -1,8 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { LegalPage } from "@/components/site/LegalPage";
 
-const TITLE = "Privacy Policy | Kavira Systems";
-const DESC = "How Kavira Systems collects, uses and retains information submitted through our enquiry form.";
+const TITLE = "Privacy Policy | Haki Systems";
+const DESC = "How Haki Systems collects, uses and retains information submitted through our enquiry form.";
 
 export const Route = createFileRoute("/privacy")({
   head: () => ({
@@ -26,7 +26,7 @@ function Privacy() {
   return (
     <LegalPage title="Privacy Policy" updated={lastUpdated}>
       <p>
-        This policy explains how Kavira Systems collects, stores and uses information submitted
+        This policy explains how Haki Systems collects, stores and uses information submitted
         through this website when you contact us or request further information about our services.
       </p>
       <h2>Information we collect</h2>

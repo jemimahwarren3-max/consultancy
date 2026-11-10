@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import type { ReactNode } from "react";
 import { Button } from "@/components/ui/button";
+import { WhatsAppButton } from "@/components/site/WhatsAppButton";
 import { cn } from "@/lib/utils";
 
 export function Section({
@@ -122,11 +123,14 @@ export function CtaBanner({
         <h2 className="display text-4xl md:col-span-7 md:text-6xl">{title}</h2>
         <div className="md:col-span-5">
           <p className="text-lg leading-relaxed text-ink-muted">{body}</p>
-          <Button asChild variant="light" size="xl" className="mt-8">
-            <Link to="/contact" hash="enquiry">
-              {cta} <ArrowRight />
-            </Link>
-          </Button>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Button asChild variant="light" size="xl">
+              <Link to="/contact" hash="enquiry">
+                {cta} <ArrowRight />
+              </Link>
+            </Button>
+            <WhatsAppButton variant="onDark" size="xl" />
+          </div>
         </div>
       </div>
     </section>
@@ -196,7 +200,7 @@ export function ProcessTimeline() {
 export function InfraDiagram() {
   const tiers = [
     ["Client-owned environment", "Google Cloud / Microsoft / Other platforms", "Owned and billed by your organisation"],
-    ["Kavira Systems engineering", "Agents / Integrations / Automation / Testing", "Engineering fee, quoted by scope"],
+    ["Haki Systems engineering", "Agents / Integrations / Automation / Testing", "Engineering fee, quoted by scope"],
     ["Business operations", "Deployed systems / Workflow improvements / Ongoing support", "Your teams, your control"],
   ];
   return (

@@ -14,7 +14,7 @@ export const SERVICE_OPTIONS = [
 ] as const;
 
 export const CONSENT_TEXT =
-  "I agree that Kavira Systems may use the information submitted here to respond to my enquiry.";
+  "I agree that Haki Systems may use the information submitted here to respond to my enquiry.";
 
 export type Enquiry = {
   fullName: string;
@@ -131,7 +131,7 @@ export function internalSubject(e: Enquiry) {
   return oneLine(`New Business Enquiry | ${e.company} | ${e.fullName}`).slice(0, 250);
 }
 
-export const ACK_SUBJECT = "We've received your enquiry | Kavira Systems";
+export const ACK_SUBJECT = "We've received your enquiry | Haki Systems";
 
 const GROUPS: { title: string; fields: (keyof Enquiry)[] }[] = [
   { title: "Contact information", fields: ["fullName", "company", "email", "phone", "country", "industry"] },
@@ -154,7 +154,7 @@ export function internalEmail(e: Enquiry, submittedAt: string) {
   const html = `<!doctype html><html><body style="margin:0;background:#F8FAFC;font-family:-apple-system,Segoe UI,Helvetica,Arial,sans-serif;color:#0B0F19">
 <table width="100%" cellpadding="0" cellspacing="0"><tr><td align="center" style="padding:32px 16px">
 <table width="600" cellpadding="0" cellspacing="0" style="max-width:600px;background:#FFFFFF;border:1px solid #E5E7EB">
-<tr><td style="background:#0B0F19;color:#FFFFFF;padding:24px 32px;font-size:16px;letter-spacing:-0.01em">Kavira Systems<span style="color:#2563EB"> ■</span><div style="font-size:12px;color:#94A3B8;margin-top:6px">New business enquiry</div></td></tr>
+<tr><td style="background:#0B0F19;color:#FFFFFF;padding:24px 32px;font-size:16px;letter-spacing:-0.01em">Haki Systems<span style="color:#2563EB"> ■</span><div style="font-size:12px;color:#94A3B8;margin-top:6px">New business enquiry</div></td></tr>
 ${GROUPS.map(
   (g) => `<tr><td style="padding:24px 32px 8px"><div style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#64748B;border-bottom:1px solid #E5E7EB;padding-bottom:8px">${g.title}</div>
 ${g.fields
@@ -171,18 +171,18 @@ ${g.fields
 export function acknowledgementEmail(e: Enquiry) {
   const lines = [
     `Dear ${e.fullName},`,
-    "Thank you for contacting Kavira Systems.",
+    "Thank you for contacting Haki Systems.",
     "We have received your enquiry and appreciate your interest in working with us.",
     "Our team will review the information and get in touch to discuss the next steps.",
     "We look forward to learning more about your organisation.",
   ];
-  const text = lines.join("\n\n") + "\n\nKavira Systems\nIntelligent systems. Engineered around your business.";
+  const text = lines.join("\n\n") + "\n\nHaki Systems\nIntelligent systems. Engineered around your business.";
   const html = `<!doctype html><html><body style="margin:0;background:#F8FAFC;font-family:-apple-system,Segoe UI,Helvetica,Arial,sans-serif;color:#0B0F19">
 <table width="100%" cellpadding="0" cellspacing="0"><tr><td align="center" style="padding:32px 16px">
 <table width="560" cellpadding="0" cellspacing="0" style="max-width:560px;background:#FFFFFF;border:1px solid #E5E7EB">
-<tr><td style="background:#0B0F19;color:#FFFFFF;padding:24px 32px;font-size:16px">Kavira Systems<span style="color:#2563EB"> ■</span></td></tr>
+<tr><td style="background:#0B0F19;color:#FFFFFF;padding:24px 32px;font-size:16px">Haki Systems<span style="color:#2563EB"> ■</span></td></tr>
 <tr><td style="padding:32px;font-size:15px;line-height:1.65">${lines.map((l) => `<p style="margin:0 0 16px">${escapeHtml(l)}</p>`).join("")}
-<p style="margin:24px 0 0">Kavira Systems<br><span style="color:#64748B">Intelligent systems. Engineered around your business.</span></p></td></tr>
+<p style="margin:24px 0 0">Haki Systems<br><span style="color:#64748B">Intelligent systems. Engineered around your business.</span></p></td></tr>
 </table></td></tr></table></body></html>`;
   return { html, text };
 }

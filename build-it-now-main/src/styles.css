@@ -41,7 +41,7 @@
 
 :root {
   --radius: 0.375rem;
-  /* Kavira palette */
+  /* Haki palette */
   --ink: oklch(0.16 0.02 265); /* #0B0F19 */
   --ink-2: oklch(0.21 0.03 265); /* #111827 */
   --ink-foreground: oklch(1 0 0);

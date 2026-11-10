@@ -3,9 +3,9 @@ import heroImg from "@/assets/approach-architecture.jpg";
 import officeImg from "@/assets/about-office.jpg";
 import { CtaBanner, ImageHero, Section, SectionHeading } from "@/components/site/blocks";
 
-const TITLE = "About Kavira Systems — AI Engineering Consultancy";
+const TITLE = "About Haki Systems — AI Engineering Consultancy";
 const DESC =
-  "Kavira Systems is an AI engineering and intelligent automation consultancy helping organisations make practical use of artificial intelligence.";
+  "Haki Systems is an AI engineering and intelligent automation consultancy helping organisations make practical use of artificial intelligence.";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -39,7 +39,7 @@ function About() {
         <div className="grid gap-14 md:grid-cols-12">
           <div className="md:col-span-7">
             <p className="heading text-2xl leading-snug md:text-[2rem]">
-              Kavira Systems is an AI engineering and intelligent automation consultancy focused on
+              Haki Systems is an AI engineering and intelligent automation consultancy focused on
               helping organisations make practical use of artificial intelligence and modern
               software technologies.
             </p>

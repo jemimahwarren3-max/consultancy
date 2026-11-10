@@ -42,7 +42,7 @@ describe("enquiry processing", () => {
     }
     expect(sent[0].html).toContain("Acme &lt;Holdings&gt;");
     expect(sent[1].to).toBe("tendai@acme.co.zw");
-    expect(sent[1].subject).toBe("We've received your enquiry | Kavira Systems");
+    expect(sent[1].subject).toBe("We've received your enquiry | Haki Systems");
   });
 
   it("reports failure and skips the acknowledgement when the internal email fails", async () => {

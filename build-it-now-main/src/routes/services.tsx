@@ -3,7 +3,7 @@ import heroImg from "@/assets/services-infrastructure.jpg";
 import { CtaBanner, ImageHero, InlineCta, Section } from "@/components/site/blocks";
 import { SERVICES } from "@/lib/site-content";
 
-const TITLE = "Services — Custom AI Agents & Business Automation | Kavira Systems";
+const TITLE = "Services — Custom AI Agents & Business Automation | Haki Systems";
 const DESC =
   "AI readiness assessments, custom AI agent development, intelligent workflow automation and managed engineering — built within your own cloud environment.";
 

@@ -3,7 +3,7 @@ import heroImg from "@/assets/approach-architecture.jpg";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { CtaBanner, ImageHero, InfraDiagram, Section, SectionHeading } from "@/components/site/blocks";
 
-const TITLE = "How We Work — Client-Owned Infrastructure Model | Kavira Systems";
+const TITLE = "How We Work — Client-Owned Infrastructure Model | Haki Systems";
 const DESC =
   "Our engagement process from discovery to support, and our client-owned infrastructure model: you own your cloud and pay providers directly; we charge for engineering.";
 
@@ -64,7 +64,7 @@ const STEPS: { title: string; body: string; list?: string[]; note?: string }[] =
 ];
 
 const COMMERCIAL = [
-  ["Engineering and implementation", "Paid to Kavira Systems", "The client pays Kavira Systems for agreed engineering, development, integration and deployment work. Fees are quoted according to scope and complexity."],
+  ["Engineering and implementation", "Paid to Haki Systems", "The client pays Haki Systems for agreed engineering, development, integration and deployment work. Fees are quoted according to scope and complexity."],
   ["Third-party infrastructure", "Paid directly to providers", "The client pays Google Cloud, Microsoft, AI providers and other third-party vendors directly. These costs are not included in our engineering invoice unless explicitly agreed otherwise. Infrastructure and API usage is not free."],
   ["Ongoing support", "Quoted separately", "Maintenance and support are quoted separately. The service agreement defines what is included and what counts as additional development."],
 ];

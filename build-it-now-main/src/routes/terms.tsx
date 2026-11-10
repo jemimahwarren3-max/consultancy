@@ -1,8 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { LegalPage } from "@/components/site/LegalPage";
 
-const TITLE = "Terms of Service | Kavira Systems";
-const DESC = "Terms governing the use of the Kavira Systems website.";
+const TITLE = "Terms of Service | Haki Systems";
+const DESC = "Terms governing the use of the Haki Systems website.";
 
 export const Route = createFileRoute("/terms")({
   head: () => ({
@@ -26,7 +26,7 @@ function Terms() {
   return (
     <LegalPage title="Terms of Service" updated={lastUpdated}>
       <p>
-        These terms govern your use of this website, operated by Kavira Systems. By using this
+        These terms govern your use of this website, operated by Haki Systems. By using this
         website, you agree to the terms set out here and to the lawful use of the information and
         services described on the site.
       </p>
@@ -48,7 +48,7 @@ function Terms() {
         usage costs for client projects are billed by those providers directly.
       </p>
       <h2>Intellectual property</h2>
-      <p>The website design, text and brand marks are owned by Kavira Systems unless stated otherwise.</p>
+      <p>The website design, text and brand marks are owned by Haki Systems unless stated otherwise.</p>
       <h2>Liability</h2>
       <p>
         To the extent permitted by law, we provide this website on an "as is" basis and are not

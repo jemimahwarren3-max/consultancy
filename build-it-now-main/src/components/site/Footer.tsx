@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { BrandMark } from "./Logo";
+import { WhatsAppButton } from "./WhatsAppButton";
 
 export function Footer() {
   return (
@@ -8,7 +9,7 @@ export function Footer() {
         <div className="md:col-span-5">
           <div className="flex items-center gap-2.5">
             <BrandMark className="text-ink-foreground [&_.stroke-background]:stroke-ink" />
-            <span className="font-medium tracking-tight">Kavira Systems</span>
+            <span className="font-medium tracking-tight">Haki Systems</span>
           </div>
           <p className="mt-5 max-w-sm text-sm leading-relaxed text-ink-muted">
             Intelligent systems. Engineered around your business. AI engineering and intelligent
@@ -32,11 +33,12 @@ export function Footer() {
           <Link to="/contact" hash="enquiry" className="mt-4 inline-block text-sm underline underline-offset-4 hover:text-brand">
             Send an enquiry →
           </Link>
+          <WhatsAppButton variant="onDark" size="sm" className="mt-4" />
         </div>
       </div>
       <div className="border-t border-ink-border">
         <div className="container-k flex flex-col gap-3 py-6 text-xs text-ink-muted md:flex-row md:justify-between">
-          <p>© {new Date().getFullYear()} Kavira Systems. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Haki Systems. All rights reserved.</p>
           <div className="flex gap-6">
             <Link to="/privacy" className="hover:text-ink-foreground">Privacy Policy</Link>
             <Link to="/terms" className="hover:text-ink-foreground">Terms of Service</Link>
