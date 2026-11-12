@@ -26,7 +26,7 @@ const ORG_JSON_LD = {
   "@type": "Organization",
   name: "Haki Systems",
   url: SITE_URL,
-  logo: `${SITE_URL}/favicon.svg`,
+  logo: `${SITE_URL}/logo.svg`,
   description: DESC,
   areaServed: ["Zimbabwe", "South Africa"],
   sameAs: [],
