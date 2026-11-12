@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import heroImg from "@/assets/services-infrastructure.jpg";
 import { CtaBanner, ImageHero, InlineCta, Section } from "@/components/site/blocks";
 import { SERVICES } from "@/lib/site-content";
+import { canonical } from "@/lib/seo";
 
 const TITLE = "Services — Custom AI Agents & Business Automation | Haki Systems";
 const DESC =
@@ -15,6 +16,7 @@ export const Route = createFileRoute("/services")({
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },
     ],
+    links: [canonical("/services")],
   }),
   component: ServicesPage,
 });

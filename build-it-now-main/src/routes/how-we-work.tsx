@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import heroImg from "@/assets/approach-architecture.jpg";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { CtaBanner, ImageHero, InfraDiagram, Section, SectionHeading } from "@/components/site/blocks";
+import { canonical } from "@/lib/seo";
 
 const TITLE = "How We Work — Client-Owned Infrastructure Model | Haki Systems";
 const DESC =
@@ -15,6 +16,7 @@ export const Route = createFileRoute("/how-we-work")({
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },
     ],
+    links: [canonical("/how-we-work")],
   }),
   component: HowWeWork,
 });

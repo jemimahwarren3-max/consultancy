@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import heroImg from "@/assets/approach-architecture.jpg";
 import officeImg from "@/assets/about-office.jpg";
 import { CtaBanner, ImageHero, Section, SectionHeading } from "@/components/site/blocks";
+import { canonical } from "@/lib/seo";
 
 const TITLE = "About Haki Systems — AI Engineering Consultancy";
 const DESC =
@@ -15,6 +16,7 @@ export const Route = createFileRoute("/about")({
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },
     ],
+    links: [canonical("/about")],
   }),
   component: About,
 });

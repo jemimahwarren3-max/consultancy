@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { LegalPage } from "@/components/site/LegalPage";
+import { canonical } from "@/lib/seo";
 
 const TITLE = "Terms of Service | Haki Systems";
 const DESC = "Terms governing the use of the Haki Systems website.";
@@ -12,6 +13,7 @@ export const Route = createFileRoute("/terms")({
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },
     ],
+    links: [canonical("/terms")],
   }),
   component: Terms,
 });

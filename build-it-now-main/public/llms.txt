@@ -1,0 +1,22 @@
+# Haki Systems
+
+> AI engineering and intelligent automation consultancy. We design and implement custom AI agents, intelligent workflows and connected business systems for organisations in Zimbabwe, South Africa and internationally.
+
+## About
+Haki Systems is a technology consultancy that engineers intelligent systems around real business needs — AI agents, automation workflows and connected infrastructure — rather than generic off-the-shelf software.
+
+## Services
+See https://www.hakisystems.co.zw/services for the full list of services, including what we assess, what we build and expected deliverables for each engagement.
+
+## How we work
+See https://www.hakisystems.co.zw/how-we-work for our six-step engagement model, from discovery through to ongoing support and maintenance, and our commercial model.
+
+## Contact
+Organisations can start a conversation via WhatsApp from https://www.hakisystems.co.zw/contact.
+
+## Important pages
+- https://www.hakisystems.co.zw/
+- https://www.hakisystems.co.zw/services
+- https://www.hakisystems.co.zw/how-we-work
+- https://www.hakisystems.co.zw/about
+- https://www.hakisystems.co.zw/contact

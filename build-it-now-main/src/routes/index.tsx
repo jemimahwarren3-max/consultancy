@@ -15,10 +15,22 @@ import {
 import { WhatsAppButton } from "@/components/site/WhatsAppButton";
 import { getWhatsAppUrl } from "@/lib/whatsapp";
 import { INDUSTRIES, SERVICES } from "@/lib/site-content";
+import { canonical, SITE_URL } from "@/lib/seo";
 
 const TITLE = "Haki Systems — AI Engineering & Intelligent Automation Consultancy";
 const DESC =
   "We design and implement custom AI agents, intelligent workflows and connected business systems for organisations in Zimbabwe, South Africa and internationally.";
+
+const ORG_JSON_LD = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Haki Systems",
+  url: SITE_URL,
+  logo: `${SITE_URL}/favicon.svg`,
+  description: DESC,
+  areaServed: ["Zimbabwe", "South Africa"],
+  sameAs: [],
+};
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -27,7 +39,9 @@ export const Route = createFileRoute("/")({
       { name: "description", content: DESC },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },
+      { "script:ld+json": ORG_JSON_LD },
     ],
+    links: [canonical("/")],
   }),
   component: Home,
 });

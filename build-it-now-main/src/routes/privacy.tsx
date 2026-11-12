@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { LegalPage } from "@/components/site/LegalPage";
+import { canonical } from "@/lib/seo";
 
 const TITLE = "Privacy Policy | Haki Systems";
 const DESC = "How Haki Systems collects, uses and retains information you share with us on WhatsApp.";
@@ -12,6 +13,7 @@ export const Route = createFileRoute("/privacy")({
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },
     ],
+    links: [canonical("/privacy")],
   }),
   component: Privacy,
 });

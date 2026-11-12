@@ -3,6 +3,7 @@ import heroImg from "@/assets/contact-skyline.jpg";
 import { ImageHero, Section } from "@/components/site/blocks";
 import { WhatsAppButton } from "@/components/site/WhatsAppButton";
 import { WHATSAPP_NUMBER } from "@/lib/whatsapp";
+import { canonical } from "@/lib/seo";
 
 const TITLE = "Contact Haki Systems — Discuss an AI or Automation Project";
 const DESC =
@@ -16,6 +17,7 @@ export const Route = createFileRoute("/contact")({
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },
     ],
+    links: [canonical("/contact")],
   }),
   component: Contact,
 });
